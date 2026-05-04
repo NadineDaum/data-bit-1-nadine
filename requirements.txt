@@ -1,0 +1,6 @@
+pandas
+plotly
+requests
+pycountry
+kaleido
+EOF
