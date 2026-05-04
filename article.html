@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Map That Kept Changing</title>
+    <meta name="description"
+        content="An interactive exploration of shifting press freedom across Europe, 2015–2025. A Data Bit using RSF press freedom index scores.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="sticky-nav" aria-label="Article sections">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Back to top">Europe's Press Freedom</a>
+            <ul class="nav-links">
+                <li><a href="#section-map" class="nav-link">Map</a></li>
+                <li><a href="#section-chart" class="nav-link">Change</a></li>
+                <li><a href="#section-caveat" class="nav-link">Caveat</a></li>
+                <li><a href="#section-reading" class="nav-link">More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <article>
+            <section id="section-hero" class="section-hero">
+                <div class="hero-content">
+                    <p class="kicker" data-animate="fade-in">Europe</p>
+                    <h1 class="hero-title" data-animate="slide-in">The Map That Kept Changing</h1>
+                    <p class="hero-deck" data-animate="fade-in" data-delay="0.2">
+                        Europe's press freedom story is not a straight line. Between 2015 and 2025, some countries
+                        gained ground, others lost it quietly, and the direction of change did not follow the map most
+                        readers would draw in their heads.
+                    </p>
+                    <p class="hero-meta">
+                        <span>Source: </span>
+                        <a href="https://data360.worldbank.org/en/dataset/RWB_PFI" target="_blank">World Bank Data360 /
+                            RSF</a>
+                        <span>•</span>
+                        <span>Time: 2015 – 2025</span>
+                    </p>
+                </div>
+            </section>
+
+            <section id="section-why" class="section-full-width">
+                <div class="section-inner">
+                    <div class="section-copy-block">
+                        <p>
+                            <strong>Europe Did Not Move As One.</strong>
+                            Press freedom tends to make headlines through moments of crisis: a newsroom raided, a
+                            journalist detained, a law passed overnight. But a decade of RSF index scores tells a slower
+                            story: not a single continental trend, but a gradual pulling apart.
+                        </p>
+                        <p>
+                            The sharpest fall belongs to Russia, which dropped more than 30 points over ten years: a
+                            decline so large it sets the scale for everything else. But Russia is not the surprise. The
+                            surprise is what happened elsewhere. <a href="https://rsf.org/en/country/montenegro"
+                                target="_blank">Montenegro</a> and <a href="https://rsf.org/en/country/north-macedonia"
+                                target="_blank">North Macedonia</a>, two Balkan countries outside Europe's usual
+                            high-scoring press-freedom cluster, posted the largest improvements in the dataset. Neither
+                            reached the top of the index, but both moved upward.
+                        </p>
+                        <p>
+                            So did the quiet slippage in Western Europe. Austria lost more than 11 points over the
+                            decade. Belgium dropped nearly 8, Finland more than 5, while Denmark and Germany also
+                            slipped.
+                            These are countries that still score well in absolute terms, but they were not standing
+                            still.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section id="section-map" class="section-full-width">
+                <div class="section-inner">
+                    <div class="section-head">
+                        <p class="section-label">Map</p>
+                        <h2>Watch the Decade Unfold</h2>
+                    </div>
+                    <div class="section-copy-block">
+                        <p>
+                            Hover to see each country's baseline and change. Use the list view for the full table.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- View Toggle Tabs -->
+                <div class="view-toggle">
+                    <button class="toggle-tab active" data-view="map" aria-label="Map view">Map</button>
+                    <button class="toggle-tab" data-view="list" aria-label="List view">List</button>
+                </div>
+
+                <!-- Map View -->
+                <div class="viz-container" id="map-view">
+                    <iframe class="figure-embed" src="figures/rsf_europe_map_2015_2025.html"
+                        title="Interactive map of Europe's press freedom scores from 2015 to 2025"></iframe>
+                </div>
+
+                <!-- List View -->
+                <div class="list-container" id="list-view" style="display: none;">
+                    <div class="list-controls">
+                        <button class="sort-btn active" data-sort="asc">Biggest declines</button>
+                        <button class="sort-btn" data-sort="desc">Biggest gains</button>
+                    </div>
+                    <table class="countries-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>2015 Score</th>
+                                <th>2025 Score</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-inner">
+                    <p class="figure-caption">
+                        Figure 1. Press freedom scores across Europe, 2015–2025. Higher scores indicate greater press
+                        freedom.
+                    </p>
+                    <p class="figure-source">
+                        Source: World Bank Data360 version of the Reporters Without Borders World Press Freedom Index.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Change Chart Section -->
+            <section id="section-chart" class="section-full-width">
+                <div class="section-inner">
+                    <div class="section-head">
+                        <p class="section-label">Chart</p>
+                        <h2>Direction of Change</h2>
+                    </div>
+                    <div class="section-copy-block">
+                        <p>
+                            A country can score low in 2025 while moving upward, or remain high while slipping. Russia
+                            is the outlier; the more revealing pattern is that movement also appears among countries
+                            that still sit far higher on the index.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="viz-container">
+                    <iframe class="figure-embed" src="figures/rsf_europe_change_2015_2025.html"
+                        title="Horizontal bar chart of the largest changes in Europe's press freedom scores from 2015 to 2025"></iframe>
+                </div>
+
+                <div class="section-inner">
+                    <p class="figure-caption">
+                        Figure 2. Largest increases and decreases in RSF press freedom scores among European countries
+                        with data in both 2015 and 2025.
+                    </p>
+                    <p class="figure-source">
+                        Source: World Bank Data360 version of the Reporters Without Borders World Press Freedom Index.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Caveat Section -->
+            <section id="section-caveat" class="section-full-width section-caveat">
+                <div class="section-inner">
+                    <div class="section-head">
+                        <p class="section-label">Caveat</p>
+                        <h2>Comparative index</h2>
+                    </div>
+                    <div class="section-copy-block">
+                        <p>
+                            The RSF score combines political, legal, economic, sociocultural and safety dimensions. It
+                            cannot explain why a score moved or show variation within each media system. Because RSF
+                            revised its methodology in 2022, read the decade comparison as broad movement rather than
+                            exact measurement.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Reading & Credits -->
+            <section id="section-reading" class="section-full-width section-footer">
+                <div class="section-inner">
+                    <div class="section-head">
+                        <h2>Read more</h2>
+                    </div>
+
+                    <div class="reading-grid">
+                        <div class="reading-item">
+                            <h3><a href="https://rsf.org/en/ranking" target="_blank">RSF Index</a></h3>
+                            <p>Ranking and country profiles.</p>
+                        </div>
+                        <div class="reading-item">
+                            <h3><a href="https://data360.worldbank.org/en/dataset/RWB_PFI" target="_blank">World Bank
+                                    Data360</a></h3>
+                            <p>Machine-readable data.</p>
+                        </div>
+                        <div class="reading-item">
+                            <h3><a href="https://rsf.org/en/index-methodologie-2022" target="_blank">RSF Methodology</a>
+                            </h3>
+                            <p>Index scoring.</p>
+                        </div>
+                        <div class="reading-item">
+                            <h3><a href="https://rsf.org/en/rsf-world-press-freedom-index-2025-economic-fragility-leading-threat-press-freedom?data_type=score-soc&amp;year=2025"
+                                    target="_blank">RSF 2025 Analysis</a></h3>
+                            <p>2025 context.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-credits">
+                        <p><strong>Data Bit No. 1</strong></p>
+                        <p class="credit-note">
+                            Nadine Daum, May 2026. Data: Reporters Without Borders World Press Freedom Index, via World
+                            Bank Data360. AI tools were used.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script src="assets/js/countries-data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+const countriesDataInline = [
+  {
+    "rank": 1,
+    "country": "Montenegro",
+    "iso3": "MNE",
+    "score_2015": 65.37,
+    "score_2025": 72.83,
+    "change": 7.46
+  },
+  {
+    "rank": 2,
+    "country": "North Macedonia",
+    "iso3": "MKD",
+    "score_2015": 63.74,
+    "score_2025": 70.44,
+    "change": 6.7
+  },
+  {
+    "rank": 3,
+    "country": "Ukraine",
+    "iso3": "UKR",
+    "score_2015": 60.9,
+    "score_2025": 63.93,
+    "change": 3.03
+  },
+  {
+    "rank": 4,
+    "country": "Armenia",
+    "iso3": "ARM",
+    "score_2015": 71.57,
+    "score_2025": 73.96,
+    "change": 2.39
+  },
+  {
+    "rank": 5,
+    "country": "Portugal",
+    "iso3": "PRT",
+    "score_2015": 82.89,
+    "score_2025": 84.26,
+    "change": 1.37
+  },
+  {
+    "rank": 6,
+    "country": "Moldova",
+    "iso3": "MDA",
+    "score_2015": 72.15,
+    "score_2025": 73.36,
+    "change": 1.21
+  },
+  {
+    "rank": 7,
+    "country": "Liechtenstein",
+    "iso3": "LIE",
+    "score_2015": 82.33,
+    "score_2025": 83.42,
+    "change": 1.09
+  },
+  {
+    "rank": 8,
+    "country": "Lithuania",
+    "iso3": "LTU",
+    "score_2015": 81.2,
+    "score_2025": 82.27,
+    "change": 1.07
+  },
+  {
+    "rank": 9,
+    "country": "Estonia",
+    "iso3": "EST",
+    "score_2015": 88.81,
+    "score_2025": 89.46,
+    "change": 0.65
+  },
+  {
+    "rank": 10,
+    "country": "Norway",
+    "iso3": "NOR",
+    "score_2015": 92.25,
+    "score_2025": 92.31,
+    "change": 0.06
+  },
+  {
+    "rank": 11,
+    "country": "Latvia",
+    "iso3": "LVA",
+    "score_2015": 81.88,
+    "score_2025": 81.82,
+    "change": -0.06
+  },
+  {
+    "rank": 12,
+    "country": "United Kingdom",
+    "iso3": "GBR",
+    "score_2015": 80.0,
+    "score_2025": 78.89,
+    "change": -1.11
+  },
+  {
+    "rank": 13,
+    "country": "Ireland",
+    "iso3": "IRL",
+    "score_2015": 88.8,
+    "score_2025": 86.92,
+    "change": -1.88
+  },
+  {
+    "rank": 14,
+    "country": "Netherlands",
+    "iso3": "NLD",
+    "score_2015": 90.78,
+    "score_2025": 88.64,
+    "change": -2.14
+  },
+  {
+    "rank": 15,
+    "country": "Switzerland",
+    "iso3": "CHE",
+    "score_2015": 86.15,
+    "score_2025": 83.98,
+    "change": -2.17
+  },
+  {
+    "rank": 16,
+    "country": "France",
+    "iso3": "FRA",
+    "score_2015": 78.85,
+    "score_2025": 76.62,
+    "change": -2.23
+  },
+  {
+    "rank": 17,
+    "country": "Sweden",
+    "iso3": "SWE",
+    "score_2015": 90.53,
+    "score_2025": 88.13,
+    "change": -2.4
+  },
+  {
+    "rank": 18,
+    "country": "Spain",
+    "iso3": "ESP",
+    "score_2015": 80.05,
+    "score_2025": 77.35,
+    "change": -2.7
+  },
+  {
+    "rank": 19,
+    "country": "Luxembourg",
+    "iso3": "LUX",
+    "score_2015": 86.39,
+    "score_2025": 83.04,
+    "change": -3.35
+  },
+  {
+    "rank": 20,
+    "country": "Italy",
+    "iso3": "ITA",
+    "score_2015": 72.06,
+    "score_2025": 68.01,
+    "change": -4.05
+  },
+  {
+    "rank": 21,
+    "country": "Czechia",
+    "iso3": "CZE",
+    "score_2015": 88.38,
+    "score_2025": 83.96,
+    "change": -4.42
+  },
+  {
+    "rank": 22,
+    "country": "Germany",
+    "iso3": "DEU",
+    "score_2015": 88.53,
+    "score_2025": 83.85,
+    "change": -4.68
+  },
+  {
+    "rank": 23,
+    "country": "Iceland",
+    "iso3": "ISL",
+    "score_2015": 86.13,
+    "score_2025": 81.36,
+    "change": -4.77
+  },
+  {
+    "rank": 24,
+    "country": "Denmark",
+    "iso3": "DNK",
+    "score_2015": 91.76,
+    "score_2025": 86.93,
+    "change": -4.83
+  },
+  {
+    "rank": 25,
+    "country": "Finland",
+    "iso3": "FIN",
+    "score_2015": 92.48,
+    "score_2025": 87.18,
+    "change": -5.3
+  },
+  {
+    "rank": 26,
+    "country": "Slovenia",
+    "iso3": "SVN",
+    "score_2015": 79.45,
+    "score_2025": 74.06,
+    "change": -5.39
+  },
+  {
+    "rank": 27,
+    "country": "Bulgaria",
+    "iso3": "BGR",
+    "score_2015": 67.09,
+    "score_2025": 60.78,
+    "change": -6.31
+  },
+  {
+    "rank": 28,
+    "country": "Belgium",
+    "iso3": "BEL",
+    "score_2015": 88.02,
+    "score_2025": 80.12,
+    "change": -7.9
+  },
+  {
+    "rank": 29,
+    "country": "Romania",
+    "iso3": "ROU",
+    "score_2015": 75.1,
+    "score_2025": 66.42,
+    "change": -8.68
+  },
+  {
+    "rank": 30,
+    "country": "Croatia",
+    "iso3": "HRV",
+    "score_2015": 73.88,
+    "score_2025": 64.2,
+    "change": -9.68
+  },
+  {
+    "rank": 31,
+    "country": "Hungary",
+    "iso3": "HUN",
+    "score_2015": 72.56,
+    "score_2025": 62.82,
+    "change": -9.74
+  },
+  {
+    "rank": 32,
+    "country": "Austria",
+    "iso3": "AUT",
+    "score_2015": 89.15,
+    "score_2025": 78.12,
+    "change": -11.03
+  },
+  {
+    "rank": 33,
+    "country": "Poland",
+    "iso3": "POL",
+    "score_2015": 87.29,
+    "score_2025": 74.79,
+    "change": -12.5
+  },
+  {
+    "rank": 34,
+    "country": "Malta",
+    "iso3": "MLT",
+    "score_2015": 75.84,
+    "score_2025": 62.96,
+    "change": -12.88
+  },
+  {
+    "rank": 35,
+    "country": "Albania",
+    "iso3": "ALB",
+    "score_2015": 71.23,
+    "score_2025": 58.18,
+    "change": -13.05
+  },
+  {
+    "rank": 36,
+    "country": "Greece",
+    "iso3": "GRC",
+    "score_2015": 68.99,
+    "score_2025": 55.37,
+    "change": -13.62
+  },
+  {
+    "rank": 37,
+    "country": "Azerbaijan",
+    "iso3": "AZE",
+    "score_2015": 41.59,
+    "score_2025": 25.47,
+    "change": -16.12
+  },
+  {
+    "rank": 38,
+    "country": "Bosnia and Herzegovina",
+    "iso3": "BIH",
+    "score_2015": 72.49,
+    "score_2025": 56.33,
+    "change": -16.16
+  },
+  {
+    "rank": 39,
+    "country": "Slovak Republic",
+    "iso3": "SVK",
+    "score_2015": 88.34,
+    "score_2025": 71.93,
+    "change": -16.41
+  },
+  {
+    "rank": 40,
+    "country": "Andorra",
+    "iso3": "AND",
+    "score_2015": 80.13,
+    "score_2025": 63.3,
+    "change": -16.83
+  },
+  {
+    "rank": 41,
+    "country": "Serbia",
+    "iso3": "SRB",
+    "score_2015": 72.34,
+    "score_2025": 53.55,
+    "change": -18.79
+  },
+  {
+    "rank": 42,
+    "country": "Georgia",
+    "iso3": "GEO",
+    "score_2015": 72.3,
+    "score_2025": 50.53,
+    "change": -21.77
+  },
+  {
+    "rank": 43,
+    "country": "Cyprus",
+    "iso3": "CYP",
+    "score_2015": 83.48,
+    "score_2025": 59.04,
+    "change": -24.44
+  },
+  {
+    "rank": 44,
+    "country": "Belarus",
+    "iso3": "BLR",
+    "score_2015": 52.02,
+    "score_2025": 25.73,
+    "change": -26.29
+  },
+  {
+    "rank": 45,
+    "country": "Türkiye",
+    "iso3": "TUR",
+    "score_2015": 55.84,
+    "score_2025": 29.4,
+    "change": -26.44
+  },
+  {
+    "rank": 46,
+    "country": "Russia",
+    "iso3": "RUS",
+    "score_2015": 55.03,
+    "score_2025": 24.57,
+    "change": -30.46
+  }
+];

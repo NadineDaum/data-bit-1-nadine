@@ -1,0 +1,507 @@
+country,iso3,year,score,status,confidence
+Albania,ALB,2015,71.23,A,PU
+Albania,ALB,2016,70.08,A,PU
+Albania,ALB,2017,70.08,A,PU
+Albania,ALB,2018,70.51,A,PU
+Albania,ALB,2019,70.16,A,PU
+Albania,ALB,2020,69.75,A,PU
+Albania,ALB,2021,69.41,A,PU
+Albania,ALB,2022,56.41,A,PU
+Albania,ALB,2023,57.86,A,PU
+Albania,ALB,2024,54.1,A,PU
+Albania,ALB,2025,58.18,A,PU
+Andorra,AND,2015,80.13,A,PU
+Andorra,AND,2016,80.13,A,PU
+Andorra,AND,2017,78.97,A,PU
+Andorra,AND,2018,77.79,A,PU
+Andorra,AND,2019,75.37,A,PU
+Andorra,AND,2020,76.77,A,PU
+Andorra,AND,2021,76.68,A,PU
+Andorra,AND,2022,68.79,A,PU
+Andorra,AND,2023,75.05,A,PU
+Andorra,AND,2024,61.44,A,PU
+Andorra,AND,2025,63.3,A,PU
+Armenia,ARM,2015,71.57,A,PU
+Armenia,ARM,2016,71.21,A,PU
+Armenia,ARM,2017,69.62,A,PU
+Armenia,ARM,2018,70.01,A,PU
+Armenia,ARM,2019,71.02,A,PU
+Armenia,ARM,2020,71.4,A,PU
+Armenia,ARM,2021,71.17,A,PU
+Armenia,ARM,2022,68.97,A,PU
+Armenia,ARM,2023,70.61,A,PU
+Armenia,ARM,2024,71.6,A,PU
+Armenia,ARM,2025,73.96,A,PU
+Austria,AUT,2015,89.15,A,PU
+Austria,AUT,2016,86.82,A,PU
+Austria,AUT,2017,86.53,A,PU
+Austria,AUT,2018,85.96,A,PU
+Austria,AUT,2019,84.67,A,PU
+Austria,AUT,2020,84.22,A,PU
+Austria,AUT,2021,83.66,A,PU
+Austria,AUT,2022,76.74,A,PU
+Austria,AUT,2023,77.3,A,PU
+Austria,AUT,2024,74.69,A,PU
+Austria,AUT,2025,78.12,A,PU
+Azerbaijan,AZE,2015,41.59,A,PU
+Azerbaijan,AZE,2016,42.11,A,PU
+Azerbaijan,AZE,2017,43.6,A,PU
+Azerbaijan,AZE,2018,40.27,A,PU
+Azerbaijan,AZE,2019,40.87,A,PU
+Azerbaijan,AZE,2020,41.52,A,PU
+Azerbaijan,AZE,2021,41.23,A,PU
+Azerbaijan,AZE,2022,39.4,A,PU
+Azerbaijan,AZE,2023,39.93,A,PU
+Azerbaijan,AZE,2024,27.99,A,PU
+Azerbaijan,AZE,2025,25.47,A,PU
+Belarus,BLR,2015,52.02,A,PU
+Belarus,BLR,2016,45.68,A,PU
+Belarus,BLR,2017,47.57,A,PU
+Belarus,BLR,2018,47.41,A,PU
+Belarus,BLR,2019,48.34,A,PU
+Belarus,BLR,2020,50.25,A,PU
+Belarus,BLR,2021,49.18,A,PU
+Belarus,BLR,2022,39.62,A,PU
+Belarus,BLR,2023,37.17,A,PU
+Belarus,BLR,2024,26.8,A,PU
+Belarus,BLR,2025,25.73,A,PU
+Belgium,BEL,2015,88.02,A,PU
+Belgium,BEL,2016,85.82,A,PU
+Belgium,BEL,2017,87.25,A,PU
+Belgium,BEL,2018,86.84,A,PU
+Belgium,BEL,2019,87.93,A,PU
+Belgium,BEL,2020,87.43,A,PU
+Belgium,BEL,2021,88.31,A,PU
+Belgium,BEL,2022,78.86,A,PU
+Belgium,BEL,2023,76.47,A,PU
+Belgium,BEL,2024,81.49,A,PU
+Belgium,BEL,2025,80.12,A,PU
+Bosnia and Herzegovina,BIH,2015,72.49,A,PU
+Bosnia and Herzegovina,BIH,2016,71.55,A,PU
+Bosnia and Herzegovina,BIH,2017,72.17,A,PU
+Bosnia and Herzegovina,BIH,2018,72.63,A,PU
+Bosnia and Herzegovina,BIH,2019,70.98,A,PU
+Bosnia and Herzegovina,BIH,2020,71.49,A,PU
+Bosnia and Herzegovina,BIH,2021,71.66,A,PU
+Bosnia and Herzegovina,BIH,2022,65.64,A,PU
+Bosnia and Herzegovina,BIH,2023,65.43,A,PU
+Bosnia and Herzegovina,BIH,2024,58.85,A,PU
+Bosnia and Herzegovina,BIH,2025,56.33,A,PU
+Bulgaria,BGR,2015,67.09,A,PU
+Bulgaria,BGR,2016,65.54,A,PU
+Bulgaria,BGR,2017,64.99,A,PU
+Bulgaria,BGR,2018,64.78,A,PU
+Bulgaria,BGR,2019,64.89,A,PU
+Bulgaria,BGR,2020,64.94,A,PU
+Bulgaria,BGR,2021,62.71,A,PU
+Bulgaria,BGR,2022,59.12,A,PU
+Bulgaria,BGR,2023,62.98,A,PU
+Bulgaria,BGR,2024,65.32,A,PU
+Bulgaria,BGR,2025,60.78,A,PU
+Croatia,HRV,2015,73.88,A,PU
+Croatia,HRV,2016,72.09,A,PU
+Croatia,HRV,2017,70.41,A,PU
+Croatia,HRV,2018,71.06,A,PU
+Croatia,HRV,2019,70.97,A,PU
+Croatia,HRV,2020,71.49,A,PU
+Croatia,HRV,2021,72.05,A,PU
+Croatia,HRV,2022,70.42,A,PU
+Croatia,HRV,2023,71.95,A,PU
+Croatia,HRV,2024,68.79,A,PU
+Croatia,HRV,2025,64.2,A,PU
+Cyprus,CYP,2015,83.48,A,PU
+Cyprus,CYP,2016,81.74,A,PU
+Cyprus,CYP,2017,80.21,A,PU
+Cyprus,CYP,2018,80.15,A,PU
+Cyprus,CYP,2019,78.26,A,PU
+Cyprus,CYP,2020,79.55,A,PU
+Cyprus,CYP,2021,80.15,A,PU
+Cyprus,CYP,2022,65.97,A,PU
+Cyprus,CYP,2023,68.62,A,PU
+Cyprus,CYP,2024,63.14,A,PU
+Cyprus,CYP,2025,59.04,A,PU
+Czechia,CZE,2015,88.38,A,PU
+Czechia,CZE,2016,83.34,A,PU
+Czechia,CZE,2017,83.09,A,PU
+Czechia,CZE,2018,78.11,A,PU
+Czechia,CZE,2019,75.11,A,PU
+Czechia,CZE,2020,76.43,A,PU
+Czechia,CZE,2021,76.62,A,PU
+Czechia,CZE,2022,80.54,A,PU
+Czechia,CZE,2023,83.58,A,PU
+Czechia,CZE,2024,80.14,A,PU
+Czechia,CZE,2025,83.96,A,PU
+Denmark,DNK,2015,91.76,A,PU
+Denmark,DNK,2016,91.11,A,PU
+Denmark,DNK,2017,89.64,A,PU
+Denmark,DNK,2018,86.01,A,PU
+Denmark,DNK,2019,90.13,A,PU
+Denmark,DNK,2020,91.87,A,PU
+Denmark,DNK,2021,91.43,A,PU
+Denmark,DNK,2022,90.27,A,PU
+Denmark,DNK,2023,89.48,A,PU
+Denmark,DNK,2024,89.6,A,PU
+Denmark,DNK,2025,86.93,A,PU
+Estonia,EST,2015,88.81,A,PU
+Estonia,EST,2016,85.69,A,PU
+Estonia,EST,2017,86.45,A,PU
+Estonia,EST,2018,85.92,A,PU
+Estonia,EST,2019,87.73,A,PU
+Estonia,EST,2020,87.39,A,PU
+Estonia,EST,2021,84.75,A,PU
+Estonia,EST,2022,88.83,A,PU
+Estonia,EST,2023,85.31,A,PU
+Estonia,EST,2024,86.44,A,PU
+Estonia,EST,2025,89.46,A,PU
+Finland,FIN,2015,92.48,A,PU
+Finland,FIN,2016,91.41,A,PU
+Finland,FIN,2017,91.08,A,PU
+Finland,FIN,2018,89.74,A,PU
+Finland,FIN,2019,92.1,A,PU
+Finland,FIN,2020,92.07,A,PU
+Finland,FIN,2021,93.01,A,PU
+Finland,FIN,2022,88.42,A,PU
+Finland,FIN,2023,87.94,A,PU
+Finland,FIN,2024,86.55,A,PU
+Finland,FIN,2025,87.18,A,PU
+France,FRA,2015,78.85,A,PU
+France,FRA,2016,76.17,A,PU
+France,FRA,2017,77.76,A,PU
+France,FRA,2018,78.13,A,PU
+France,FRA,2019,77.79,A,PU
+France,FRA,2020,77.08,A,PU
+France,FRA,2021,77.4,A,PU
+France,FRA,2022,78.53,A,PU
+France,FRA,2023,78.72,A,PU
+France,FRA,2024,78.65,A,PU
+France,FRA,2025,76.62,A,PU
+Georgia,GEO,2015,72.3,A,PU
+Georgia,GEO,2016,72.04,A,PU
+Georgia,GEO,2017,72.24,A,PU
+Georgia,GEO,2018,72.66,A,PU
+Georgia,GEO,2019,71.02,A,PU
+Georgia,GEO,2020,71.41,A,PU
+Georgia,GEO,2021,71.36,A,PU
+Georgia,GEO,2022,59.3,A,PU
+Georgia,GEO,2023,61.69,A,PU
+Georgia,GEO,2024,53.05,A,PU
+Georgia,GEO,2025,50.53,A,PU
+Germany,DEU,2015,88.53,A,PU
+Germany,DEU,2016,85.2,A,PU
+Germany,DEU,2017,85.03,A,PU
+Germany,DEU,2018,85.61,A,PU
+Germany,DEU,2019,85.4,A,PU
+Germany,DEU,2020,87.84,A,PU
+Germany,DEU,2021,84.76,A,PU
+Germany,DEU,2022,82.04,A,PU
+Germany,DEU,2023,81.91,A,PU
+Germany,DEU,2024,83.84,A,PU
+Germany,DEU,2025,83.85,A,PU
+Greece,GRC,2015,68.99,A,PU
+Greece,GRC,2016,69.65,A,PU
+Greece,GRC,2017,69.11,A,PU
+Greece,GRC,2018,70.81,A,PU
+Greece,GRC,2019,70.92,A,PU
+Greece,GRC,2020,71.2,A,PU
+Greece,GRC,2021,70.99,A,PU
+Greece,GRC,2022,55.52,A,PU
+Greece,GRC,2023,55.2,A,PU
+Greece,GRC,2024,57.15,A,PU
+Greece,GRC,2025,55.37,A,PU
+Hungary,HUN,2015,72.56,A,PU
+Hungary,HUN,2016,71.83,A,PU
+Hungary,HUN,2017,70.99,A,PU
+Hungary,HUN,2018,70.89,A,PU
+Hungary,HUN,2019,69.56,A,PU
+Hungary,HUN,2020,69.16,A,PU
+Hungary,HUN,2021,68.24,A,PU
+Hungary,HUN,2022,59.8,A,PU
+Hungary,HUN,2023,62.96,A,PU
+Hungary,HUN,2024,62.98,A,PU
+Hungary,HUN,2025,62.82,A,PU
+Iceland,ISL,2015,86.13,A,PU
+Iceland,ISL,2016,84.7,A,PU
+Iceland,ISL,2017,86.97,A,PU
+Iceland,ISL,2018,85.9,A,PU
+Iceland,ISL,2019,85.29,A,PU
+Iceland,ISL,2020,84.88,A,PU
+Iceland,ISL,2021,84.63,A,PU
+Iceland,ISL,2022,82.69,A,PU
+Iceland,ISL,2023,83.19,A,PU
+Iceland,ISL,2024,80.13,A,PU
+Iceland,ISL,2025,81.36,A,PU
+Ireland,IRL,2015,88.8,A,PU
+Ireland,IRL,2016,87.6,A,PU
+Ireland,IRL,2017,85.92,A,PU
+Ireland,IRL,2018,85.41,A,PU
+Ireland,IRL,2019,85.0,A,PU
+Ireland,IRL,2020,87.4,A,PU
+Ireland,IRL,2021,88.09,A,PU
+Ireland,IRL,2022,88.3,A,PU
+Ireland,IRL,2023,89.91,A,PU
+Ireland,IRL,2024,85.59,A,PU
+Ireland,IRL,2025,86.92,A,PU
+Italy,ITA,2015,72.06,A,PU
+Italy,ITA,2016,71.07,A,PU
+Italy,ITA,2017,73.74,A,PU
+Italy,ITA,2018,75.88,A,PU
+Italy,ITA,2019,75.02,A,PU
+Italy,ITA,2020,76.31,A,PU
+Italy,ITA,2021,76.61,A,PU
+Italy,ITA,2022,68.16,A,PU
+Italy,ITA,2023,72.05,A,PU
+Italy,ITA,2024,69.8,A,PU
+Italy,ITA,2025,68.01,A,PU
+Latvia,LVA,2015,81.88,A,PU
+Latvia,LVA,2016,82.62,A,PU
+Latvia,LVA,2017,81.38,A,PU
+Latvia,LVA,2018,80.37,A,PU
+Latvia,LVA,2019,80.47,A,PU
+Latvia,LVA,2020,81.44,A,PU
+Latvia,LVA,2021,80.74,A,PU
+Latvia,LVA,2022,79.17,A,PU
+Latvia,LVA,2023,83.27,A,PU
+Latvia,LVA,2024,82.9,A,PU
+Latvia,LVA,2025,81.82,A,PU
+Liechtenstein,LIE,2015,82.33,A,PU
+Liechtenstein,LIE,2016,81.64,A,PU
+Liechtenstein,LIE,2017,79.69,A,PU
+Liechtenstein,LIE,2018,79.51,A,PU
+Liechtenstein,LIE,2019,79.51,A,PU
+Liechtenstein,LIE,2020,80.48,A,PU
+Liechtenstein,LIE,2021,80.51,A,PU
+Liechtenstein,LIE,2022,84.03,A,PU
+Liechtenstein,LIE,2023,84.47,A,PU
+Liechtenstein,LIE,2024,81.52,A,PU
+Liechtenstein,LIE,2025,83.42,A,PU
+Lithuania,LTU,2015,81.2,A,PU
+Lithuania,LTU,2016,80.05,A,PU
+Lithuania,LTU,2017,78.63,A,PU
+Lithuania,LTU,2018,77.8,A,PU
+Lithuania,LTU,2019,77.94,A,PU
+Lithuania,LTU,2020,78.81,A,PU
+Lithuania,LTU,2021,79.85,A,PU
+Lithuania,LTU,2022,84.14,A,PU
+Lithuania,LTU,2023,86.79,A,PU
+Lithuania,LTU,2024,81.73,A,PU
+Lithuania,LTU,2025,82.27,A,PU
+Luxembourg,LUX,2015,86.39,A,PU
+Luxembourg,LUX,2016,85.57,A,PU
+Luxembourg,LUX,2017,85.28,A,PU
+Luxembourg,LUX,2018,85.28,A,PU
+Luxembourg,LUX,2019,84.34,A,PU
+Luxembourg,LUX,2020,84.54,A,PU
+Luxembourg,LUX,2021,82.44,A,PU
+Luxembourg,LUX,2022,79.81,A,PU
+Luxembourg,LUX,2023,81.98,A,PU
+Luxembourg,LUX,2024,83.8,A,PU
+Luxembourg,LUX,2025,83.04,A,PU
+Malta,MLT,2015,75.84,A,PU
+Malta,MLT,2016,76.16,A,PU
+Malta,MLT,2017,75.24,A,PU
+Malta,MLT,2018,72.56,A,PU
+Malta,MLT,2019,70.26,A,PU
+Malta,MLT,2020,69.84,A,PU
+Malta,MLT,2021,69.54,A,PU
+Malta,MLT,2022,61.55,A,PU
+Malta,MLT,2023,59.76,A,PU
+Malta,MLT,2024,60.96,A,PU
+Malta,MLT,2025,62.96,A,PU
+Moldova,MDA,2015,72.15,A,PU
+Moldova,MDA,2016,71.17,A,PU
+Moldova,MDA,2017,69.59,A,PU
+Moldova,MDA,2018,69.99,A,PU
+Moldova,MDA,2019,68.79,A,PU
+Moldova,MDA,2020,68.84,A,PU
+Moldova,MDA,2021,68.39,A,PU
+Moldova,MDA,2022,73.47,A,PU
+Moldova,MDA,2023,77.62,A,PU
+Moldova,MDA,2024,74.86,A,PU
+Moldova,MDA,2025,73.36,A,PU
+Montenegro,MNE,2015,65.37,A,PU
+Montenegro,MNE,2016,67.21,A,PU
+Montenegro,MNE,2017,66.35,A,PU
+Montenegro,MNE,2018,68.79,A,PU
+Montenegro,MNE,2019,67.26,A,PU
+Montenegro,MNE,2020,66.17,A,PU
+Montenegro,MNE,2021,65.67,A,PU
+Montenegro,MNE,2022,66.54,A,PU
+Montenegro,MNE,2023,74.28,A,PU
+Montenegro,MNE,2024,73.21,A,PU
+Montenegro,MNE,2025,72.83,A,PU
+Netherlands,NLD,2015,90.78,A,PU
+Netherlands,NLD,2016,91.24,A,PU
+Netherlands,NLD,2017,88.72,A,PU
+Netherlands,NLD,2018,89.99,A,PU
+Netherlands,NLD,2019,91.37,A,PU
+Netherlands,NLD,2020,90.04,A,PU
+Netherlands,NLD,2021,90.33,A,PU
+Netherlands,NLD,2022,77.93,A,PU
+Netherlands,NLD,2023,87.0,A,PU
+Netherlands,NLD,2024,87.73,A,PU
+Netherlands,NLD,2025,88.64,A,PU
+North Macedonia,MKD,2015,63.74,A,PU
+North Macedonia,MKD,2016,63.91,A,PU
+North Macedonia,MKD,2017,64.26,A,PU
+North Macedonia,MKD,2018,67.57,A,PU
+North Macedonia,MKD,2019,68.34,A,PU
+North Macedonia,MKD,2020,68.72,A,PU
+North Macedonia,MKD,2021,68.33,A,PU
+North Macedonia,MKD,2022,68.44,A,PU
+North Macedonia,MKD,2023,74.35,A,PU
+North Macedonia,MKD,2024,73.78,A,PU
+North Macedonia,MKD,2025,70.44,A,PU
+Norway,NOR,2015,92.25,A,PU
+Norway,NOR,2016,91.21,A,PU
+Norway,NOR,2017,92.4,A,PU
+Norway,NOR,2018,92.37,A,PU
+Norway,NOR,2019,92.18,A,PU
+Norway,NOR,2020,92.16,A,PU
+Norway,NOR,2021,93.28,A,PU
+Norway,NOR,2022,92.65,A,PU
+Norway,NOR,2023,95.18,A,PU
+Norway,NOR,2024,91.89,A,PU
+Norway,NOR,2025,92.31,A,PU
+Poland,POL,2015,87.29,A,PU
+Poland,POL,2016,76.11,A,PU
+Poland,POL,2017,73.53,A,PU
+Poland,POL,2018,73.41,A,PU
+Poland,POL,2019,71.11,A,PU
+Poland,POL,2020,71.35,A,PU
+Poland,POL,2021,71.16,A,PU
+Poland,POL,2022,65.64,A,PU
+Poland,POL,2023,67.66,A,PU
+Poland,POL,2024,69.17,A,PU
+Poland,POL,2025,74.79,A,PU
+Portugal,PRT,2015,82.89,A,PU
+Portugal,PRT,2016,82.73,A,PU
+Portugal,PRT,2017,84.23,A,PU
+Portugal,PRT,2018,85.83,A,PU
+Portugal,PRT,2019,87.37,A,PU
+Portugal,PRT,2020,88.17,A,PU
+Portugal,PRT,2021,89.89,A,PU
+Portugal,PRT,2022,87.07,A,PU
+Portugal,PRT,2023,84.6,A,PU
+Portugal,PRT,2024,85.9,A,PU
+Portugal,PRT,2025,84.26,A,PU
+Romania,ROU,2015,75.1,A,PU
+Romania,ROU,2016,75.71,A,PU
+Romania,ROU,2017,75.54,A,PU
+Romania,ROU,2018,76.35,A,PU
+Romania,ROU,2019,74.33,A,PU
+Romania,ROU,2020,74.09,A,PU
+Romania,ROU,2021,75.09,A,PU
+Romania,ROU,2022,68.46,A,PU
+Romania,ROU,2023,69.04,A,PU
+Romania,ROU,2024,68.45,A,PU
+Romania,ROU,2025,66.42,A,PU
+Russian Federation,RUS,2015,55.03,A,PU
+Russian Federation,RUS,2016,50.97,A,PU
+Russian Federation,RUS,2017,50.55,A,PU
+Russian Federation,RUS,2018,50.04,A,PU
+Russian Federation,RUS,2019,49.69,A,PU
+Russian Federation,RUS,2020,51.08,A,PU
+Russian Federation,RUS,2021,51.29,A,PU
+Russian Federation,RUS,2022,38.82,A,PU
+Russian Federation,RUS,2023,34.77,A,PU
+Russian Federation,RUS,2024,29.86,A,PU
+Russian Federation,RUS,2025,24.57,A,PU
+Serbia,SRB,2015,72.34,A,PU
+Serbia,SRB,2016,72.4,A,PU
+Serbia,SRB,2017,71.95,A,PU
+Serbia,SRB,2018,70.42,A,PU
+Serbia,SRB,2019,68.82,A,PU
+Serbia,SRB,2020,68.38,A,PU
+Serbia,SRB,2021,67.97,A,PU
+Serbia,SRB,2022,61.51,A,PU
+Serbia,SRB,2023,59.16,A,PU
+Serbia,SRB,2024,54.48,A,PU
+Serbia,SRB,2025,53.55,A,PU
+Slovak Republic,SVK,2015,88.34,A,PU
+Slovak Republic,SVK,2016,86.74,A,PU
+Slovak Republic,SVK,2017,84.49,A,PU
+Slovak Republic,SVK,2018,79.74,A,PU
+Slovak Republic,SVK,2019,76.42,A,PU
+Slovak Republic,SVK,2020,77.33,A,PU
+Slovak Republic,SVK,2021,76.98,A,PU
+Slovak Republic,SVK,2022,78.37,A,PU
+Slovak Republic,SVK,2023,83.22,A,PU
+Slovak Republic,SVK,2024,76.03,A,PU
+Slovak Republic,SVK,2025,71.93,A,PU
+Slovenia,SVN,2015,79.45,A,PU
+Slovenia,SVN,2016,77.74,A,PU
+Slovenia,SVN,2017,78.3,A,PU
+Slovenia,SVN,2018,78.31,A,PU
+Slovenia,SVN,2019,77.69,A,PU
+Slovenia,SVN,2020,77.36,A,PU
+Slovenia,SVN,2021,76.9,A,PU
+Slovenia,SVN,2022,68.54,A,PU
+Slovenia,SVN,2023,70.59,A,PU
+Slovenia,SVN,2024,72.6,A,PU
+Slovenia,SVN,2025,74.06,A,PU
+Spain,ESP,2015,80.05,A,PU
+Spain,ESP,2016,80.08,A,PU
+Spain,ESP,2017,81.31,A,PU
+Spain,ESP,2018,79.49,A,PU
+Spain,ESP,2019,78.01,A,PU
+Spain,ESP,2020,77.84,A,PU
+Spain,ESP,2021,79.56,A,PU
+Spain,ESP,2022,76.71,A,PU
+Spain,ESP,2023,75.37,A,PU
+Spain,ESP,2024,76.01,A,PU
+Spain,ESP,2025,77.35,A,PU
+Sweden,SWE,2015,90.53,A,PU
+Sweden,SWE,2016,87.67,A,PU
+Sweden,SWE,2017,91.73,A,PU
+Sweden,SWE,2018,91.69,A,PU
+Sweden,SWE,2019,91.69,A,PU
+Sweden,SWE,2020,90.75,A,PU
+Sweden,SWE,2021,92.76,A,PU
+Sweden,SWE,2022,88.84,A,PU
+Sweden,SWE,2023,88.15,A,PU
+Sweden,SWE,2024,88.32,A,PU
+Sweden,SWE,2025,88.13,A,PU
+Switzerland,CHE,2015,86.15,A,PU
+Switzerland,CHE,2016,88.24,A,PU
+Switzerland,CHE,2017,87.87,A,PU
+Switzerland,CHE,2018,88.73,A,PU
+Switzerland,CHE,2019,89.48,A,PU
+Switzerland,CHE,2020,89.38,A,PU
+Switzerland,CHE,2021,89.45,A,PU
+Switzerland,CHE,2022,82.72,A,PU
+Switzerland,CHE,2023,84.4,A,PU
+Switzerland,CHE,2024,84.01,A,PU
+Switzerland,CHE,2025,83.98,A,PU
+Turkiye,TUR,2015,55.84,A,PU
+Turkiye,TUR,2016,49.24,A,PU
+Turkiye,TUR,2017,47.02,A,PU
+Turkiye,TUR,2018,46.5,A,PU
+Turkiye,TUR,2019,47.19,A,PU
+Turkiye,TUR,2020,49.98,A,PU
+Turkiye,TUR,2021,50.21,A,PU
+Turkiye,TUR,2022,41.25,A,PU
+Turkiye,TUR,2023,33.97,A,PU
+Turkiye,TUR,2024,31.6,A,PU
+Turkiye,TUR,2025,29.4,A,PU
+Ukraine,UKR,2015,60.9,A,PU
+Ukraine,UKR,2016,67.07,A,PU
+Ukraine,UKR,2017,66.81,A,PU
+Ukraine,UKR,2018,68.84,A,PU
+Ukraine,UKR,2019,67.54,A,PU
+Ukraine,UKR,2020,67.48,A,PU
+Ukraine,UKR,2021,67.04,A,PU
+Ukraine,UKR,2022,55.76,A,PU
+Ukraine,UKR,2023,61.19,A,PU
+Ukraine,UKR,2024,65.0,A,PU
+Ukraine,UKR,2025,63.93,A,PU
+United Kingdom,GBR,2015,80.0,A,PU
+United Kingdom,GBR,2016,78.3,A,PU
+United Kingdom,GBR,2017,77.74,A,PU
+United Kingdom,GBR,2018,76.75,A,PU
+United Kingdom,GBR,2019,77.77,A,PU
+United Kingdom,GBR,2020,77.07,A,PU
+United Kingdom,GBR,2021,78.41,A,PU
+United Kingdom,GBR,2022,78.71,A,PU
+United Kingdom,GBR,2023,78.51,A,PU
+United Kingdom,GBR,2024,77.51,A,PU
+United Kingdom,GBR,2025,78.89,A,PU
