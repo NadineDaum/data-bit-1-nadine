@@ -1,13 +1,13 @@
 # The Map That Kept Changing
 
-**Data Bit No. 1 — Data Journalism**
+**Data Bit No. 1 — Data Journalism**  
 **Date: Spring 2026**  
 **Author:** Nadine Daum  
-[View the article](https://rawcdn.githack.com/NadineDaum/data-bit-1-nadine/056523793fecaf50d811e125097532b0a910eb83/article.html)
+[View article](https://rawcdn.githack.com/NadineDaum/data-bit-1-nadine/3e1325ab5e4a90dc7f33cd1d9a7ecec5b43c7cbf/article.html)
 
 This project is an interactive data journalism piece about changes in European press freedom scores between **2015 and 2025**. It uses the **Reporters Without Borders World Press Freedom Index**, accessed through **World Bank Data360**, to compare country-level movement over time.
 
-The piece asks a descriptive question:
+The piece asks:
 
 > How did European press freedom scores move over the past decade?
 
