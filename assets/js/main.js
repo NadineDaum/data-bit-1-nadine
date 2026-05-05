@@ -191,9 +191,9 @@ function populateTable(sortOrder) {
 
         row.innerHTML = `
             <td>${country.country}</td>
-            <td>${country.score_2015.toFixed(2)}</td>
-            <td>${country.score_2025.toFixed(2)}</td>
-            <td class="change-cell ${changeClass}">${changeSign}${country.change.toFixed(2)}</td>
+            <td>${country.score_2015.toFixed(1)}</td>
+            <td>${country.score_2025.toFixed(1)}</td>
+            <td class="change-cell ${changeClass}">${changeSign}${country.change.toFixed(1)} pts</td>
         `;
 
         tableBody.appendChild(row);

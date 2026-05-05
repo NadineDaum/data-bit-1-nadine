@@ -13,6 +13,18 @@ CHANGE_PATH = ROOT / "data" / "processed" / "rsf_europe_change_2015_2025.csv"
 FIGURE_DIR = ROOT / "figures"
 MAP_PATH = FIGURE_DIR / "rsf_europe_map_2015_2025.html"
 CHANGE_FIG_PATH = FIGURE_DIR / "rsf_europe_change_2015_2025.html"
+MAP_CONFIG = {
+    "displayModeBar": False,
+    "displaylogo": False,
+    "scrollZoom": False,
+    "doubleClick": False,
+    "responsive": True,
+}
+FIGURE_CONFIG = {
+    "displayModeBar": False,
+    "displaylogo": False,
+    "responsive": True,
+}
 
 DISPLAY_NAMES = {
     "Russian Federation": "Russia",
@@ -22,6 +34,12 @@ DISPLAY_NAMES = {
 FIGURE_BG = "#fafafa"
 LAND_COLOR = "#ecefec"
 ACCENT_DARK = "#24636b"
+MAP_BG = "#02040a"
+MAP_TEXT = "#f7f8ff"
+MAP_MUTED = "#a7adbd"
+MAP_PURPLE = "#7b68ee"
+MAP_BRIGHT_PURPLE = "#a78bfa"
+MAP_OUTLINE = "#ffffff"
 GAIN = "#24636b"
 DECLINE = "#9fb8bd"
 TEXT_COLOR = "#181817"
@@ -42,74 +60,83 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
     map_frame["display_country"] = map_frame["country"].map(display_country)
     map_frame["year"] = map_frame["year"].astype(int)
     
-    # Get 2015 baseline scores for hover context
+    # Add stable 2015 and 2025 context for hover labels.
     baseline_2015 = map_frame[map_frame["year"] == 2015][["country", "iso3", "score"]].rename(
         columns={"score": "score_2015"}
     )
+    score_2025 = map_frame[map_frame["year"] == 2025][["iso3", "score"]].rename(
+        columns={"score": "score_2025"}
+    )
     map_frame = map_frame.merge(baseline_2015[["iso3", "score_2015"]], on="iso3", how="left")
-    map_frame["change_since_2015"] = map_frame["score"] - map_frame["score_2015"]
-    map_frame["change_since_2015"] = map_frame["change_since_2015"].round(2)
+    map_frame = map_frame.merge(score_2025, on="iso3", how="left")
+    map_frame["total_change"] = map_frame["score_2025"] - map_frame["score_2015"]
+    map_frame["total_change"] = map_frame["total_change"].round(1)
     map_frame["score"] = map_frame["score"].round(2)
-    map_frame["score_2015"] = map_frame["score_2015"].round(2)
+    map_frame["score_2015"] = map_frame["score_2015"].round(1)
 
     fig = px.choropleth(
         map_frame,
         locations="iso3",
         color="score",
         hover_name="display_country",
-        custom_data=["score_2015", "change_since_2015"],
-        color_continuous_scale=[[0, "#edf3f1"], [1, ACCENT_DARK]],
+        custom_data=["score_2015", "total_change"],
+        color_continuous_scale=[[0, "#12091f"], [0.5, "#5b3abf"], [1, MAP_BRIGHT_PURPLE]],
         range_color=(0, 100),
         scope="europe",
         animation_frame="year",
         animation_group="country",
-        title="Press freedom scores in Europe, 2015 to 2025",
+        title="Change of Press Freedom<br>Scores in Europe",
     )
     
     # Create custom hover template with journalistic context
     hover_template = (
         "<b>%{hovertext}</b><br>"
-        "Score: %{z:.2f}<br>"
-        "2015 baseline: %{customdata[0]:.2f}<br>"
-        "Change: %{customdata[1]:+.2f} points"
+        "Baseline, 2015: %{customdata[0]:.1f}<br>"
+        "Total change: %{customdata[1]:+.1f} pts"
         "<extra></extra>"
     )
     fig.update_traces(hovertemplate=hover_template)
     for frame in fig.frames:
         for trace in frame.data:
             trace.hovertemplate = hover_template
+            trace.marker.line.color = MAP_OUTLINE
+            trace.marker.line.width = 0.45
+    fig.update_traces(marker_line_color=MAP_OUTLINE, marker_line_width=0.45)
     fig.update_layout(
         title={
-            "text": "Press freedom scores in Europe, 2015 to 2025",
-            "font": {"size": 18, "color": TEXT_COLOR, "family": "Arial, sans-serif"},
+            "text": "Change of Press Freedom<br>Scores in Europe",
+            "font": {"size": 22, "color": MAP_TEXT, "family": "Arial, sans-serif"},
             "x": 0.5,
             "xanchor": "center",
         },
         coloraxis_colorbar=dict(
             title=dict(
                 text="Press Freedom<br>(0=Worst, 100=Best)",
-                font=dict(size=12, color=TEXT_COLOR, family="Arial, sans-serif"),
+                font=dict(size=12, color=MAP_TEXT, family="Arial, sans-serif"),
             ),
-            tickfont=dict(size=11, color=TEXT_COLOR, family="Arial, sans-serif"),
+            tickfont=dict(size=11, color=MAP_MUTED, family="Arial, sans-serif"),
             thickness=20,
             len=0.7,
             x=0.98,
             xanchor="right",
         ),
-        paper_bgcolor=FIGURE_BG,
-        plot_bgcolor=FIGURE_BG,
-        font=dict(family="Arial, sans-serif", color=TEXT_COLOR),
-        margin=dict(l=0, r=60, t=80, b=40),
+        paper_bgcolor=MAP_BG,
+        plot_bgcolor=MAP_BG,
+        font=dict(family="Arial, sans-serif", color=MAP_TEXT),
+        dragmode=False,
+        margin=dict(l=0, r=44, t=96, b=52),
         geo=dict(
-            bgcolor=FIGURE_BG,
+            bgcolor=MAP_BG,
             showland=True,
-            landcolor=LAND_COLOR,
+            landcolor=MAP_BG,
             showocean=True,
-            oceancolor=FIGURE_BG,
-            coastlinecolor="#d0d0ce",
+            oceancolor=MAP_BG,
+            coastlinecolor=MAP_OUTLINE,
+            countrycolor=MAP_OUTLINE,
+            showcountries=True,
             projection_type="natural earth",
-            lataxis_range=[35, 72],
-            lonaxis_range=[-15, 45],
+            lataxis_range=[34, 72],
+            lonaxis_range=[-18, 48],
         ),
         # Hide slider
         sliders=[{
@@ -128,7 +155,7 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
                         "fromcurrent": True,
                         "transition": {"duration": 300, "easing": "cubic-in-out"}
                     }],
-                    "label": "▶ Play",
+                    "label": "▶",
                     "method": "animate"
                 },
                 {
@@ -137,22 +164,22 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
                         "fromcurrent": True,
                         "transition": {"duration": 0}
                     }],
-                    "label": "⏸ Pause",
+                    "label": "⏸",
                     "method": "animate"
                 }
             ],
             "direction": "left",
-            "pad": {"r": 10, "t": 85},
-            "showactive": True,
+            "pad": {"r": 6, "t": 0},
+            "showactive": False,
             "type": "buttons",
-            "x": 0.05,
+            "x": 0.06,
             "xanchor": "left",
-            "y": 0,
-            "yanchor": "top",
-            "bgcolor": "#ffffff",
-            "bordercolor": "#d0d0ce",
+            "y": 0.04,
+            "yanchor": "bottom",
+            "bgcolor": "rgba(0,0,0,0)",
+            "bordercolor": MAP_OUTLINE,
             "borderwidth": 1,
-            "font": {"size": 12, "color": TEXT_COLOR, "family": "Arial, sans-serif"},
+            "font": {"size": 12, "color": MAP_TEXT, "family": "Arial, sans-serif"},
         }]
     )
     
@@ -166,9 +193,8 @@ def build_change_figure(frame: pd.DataFrame) -> go.Figure:
     display["change"] = display["change"].round(2)
 
     display = display.assign(display_country=display["country"].map(display_country))
-    colors = [GAIN if value > 0 else DECLINE for value in display["change"]]
-    x_min = -32
-    x_max = 10
+    colors = [MAP_BRIGHT_PURPLE if value > 0 else "#4c357f" for value in display["change"]]
+    x_limit = 32
 
     fig = go.Figure(
         go.Bar(
@@ -176,40 +202,45 @@ def build_change_figure(frame: pd.DataFrame) -> go.Figure:
             y=display["display_country"],
             orientation="h",
             marker_color=colors,
+            marker_line_color="rgba(255,255,255,0.35)",
+            marker_line_width=0.5,
             width=0.5,
             cliponaxis=False,
-            hovertemplate="%{y}<br>Change: %{x:.2f}<extra></extra>",
+            hovertemplate="<b>%{y}</b><br>Change: %{x:+.1f} pts<extra></extra>",
         )
     )
-    fig.add_vline(x=0, line_width=1, line_color="#555555")
+    fig.add_vline(x=0, line_width=1, line_color="rgba(255,255,255,0.72)")
 
     fig.update_layout(
         title={
-            "text": "Largest changes in press freedom scores, 2015 to 2025",
-            "font": {"size": 18, "color": TEXT_COLOR, "family": "Arial, sans-serif"},
+            "text": "Largest Changes in Press Freedom Scores",
+            "font": {"size": 22, "color": MAP_TEXT, "family": "Arial, sans-serif"},
             "x": 0.5,
             "xanchor": "center",
         },
-        xaxis_title="Score change (2025 minus 2015)",
         yaxis_title="",
         xaxis=dict(
+            title=dict(
+                text="Change in press freedom score, 2015 to 2025 (points)",
+                font=dict(size=13, color=MAP_TEXT, family="Arial, sans-serif"),
+            ),
             showgrid=True,
             gridwidth=1,
-            gridcolor="rgba(129, 159, 166, 0.25)",
+            gridcolor="rgba(255, 255, 255, 0.12)",
             zeroline=False,
-            tickfont=dict(size=11, color=TEXT_COLOR, family="Arial, sans-serif"),
-            range=[x_min, x_max],
+            tickfont=dict(size=11, color=MAP_MUTED, family="Arial, sans-serif"),
+            range=[-x_limit, x_limit],
         ),
         yaxis=dict(
-            tickfont=dict(size=11, color=TEXT_COLOR, family="Arial, sans-serif"),
+            tickfont=dict(size=12, color=MAP_TEXT, family="Arial, sans-serif"),
             automargin=True,
         ),
-        paper_bgcolor=FIGURE_BG,
-        plot_bgcolor=FIGURE_BG,
-        font=dict(family="Arial, sans-serif", color=TEXT_COLOR),
-        margin=dict(l=0, r=40, t=68, b=40),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Arial, sans-serif", color=MAP_TEXT),
+        margin=dict(l=20, r=44, t=82, b=60),
         bargap=0.4,
-        height=390,
+        height=500,
     )
     return fig
 
@@ -227,8 +258,8 @@ def main() -> None:
     map_figure = build_map_figure(frame)
     change_figure = build_change_figure(change)
 
-    map_figure.write_html(MAP_PATH, include_plotlyjs="cdn")
-    change_figure.write_html(CHANGE_FIG_PATH, include_plotlyjs="cdn")
+    map_figure.write_html(MAP_PATH, include_plotlyjs="cdn", config=MAP_CONFIG)
+    change_figure.write_html(CHANGE_FIG_PATH, include_plotlyjs="cdn", config=FIGURE_CONFIG)
 
     # Add looping animation to map figure
     _add_animation_loop(MAP_PATH)
