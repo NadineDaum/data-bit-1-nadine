@@ -3,7 +3,7 @@
 **Data Bit No. 1 — Data Journalism**  
 **Date: Spring 2026**  
 **Author:** Nadine Daum  
-[View article](https://raw.githack.com/NadineDaum/data-bit-1-nadine/main/article.html)
+[View article](https://rawcdn.githack.com/NadineDaum/data-bit-1-nadine/9350b1cab43588ce0d69523f50847b625e51104c/article.html)
 
 This project is an interactive data journalism piece about changes in European press freedom scores between 2015 and 2025. It uses the **Reporters Without Borders World Press Freedom Index**, accessed through **World Bank Data360**.
 
