@@ -1,0 +1,47 @@
+country,iso3,in_rsf_data,in_map_geometry,has_2015,has_2025,in_final_outputs
+Albania,ALB,True,True,True,True,True
+Andorra,AND,True,True,True,True,True
+Armenia,ARM,True,True,True,True,True
+Austria,AUT,True,True,True,True,True
+Azerbaijan,AZE,True,True,True,True,True
+Belgium,BEL,True,True,True,True,True
+Bulgaria,BGR,True,True,True,True,True
+Bosnia and Herzegovina,BIH,True,True,True,True,True
+Belarus,BLR,True,True,True,True,True
+Switzerland,CHE,True,True,True,True,True
+Cyprus,CYP,True,True,True,True,True
+Czechia,CZE,True,True,True,True,True
+Germany,DEU,True,True,True,True,True
+Denmark,DNK,True,True,True,True,True
+Spain,ESP,True,True,True,True,True
+Estonia,EST,True,True,True,True,True
+Finland,FIN,True,True,True,True,True
+France,FRA,True,True,True,True,True
+United Kingdom,GBR,True,True,True,True,True
+Georgia,GEO,True,True,True,True,True
+Greece,GRC,True,True,True,True,True
+Croatia,HRV,True,True,True,True,True
+Hungary,HUN,True,True,True,True,True
+Ireland,IRL,True,True,True,True,True
+Iceland,ISL,True,True,True,True,True
+Italy,ITA,True,True,True,True,True
+Liechtenstein,LIE,True,True,True,True,True
+Lithuania,LTU,True,True,True,True,True
+Luxembourg,LUX,True,True,True,True,True
+Latvia,LVA,True,True,True,True,True
+Moldova,MDA,True,True,True,True,True
+North Macedonia,MKD,True,True,True,True,True
+Malta,MLT,True,True,True,True,True
+Montenegro,MNE,True,True,True,True,True
+Netherlands,NLD,True,True,True,True,True
+Norway,NOR,True,True,True,True,True
+Poland,POL,True,True,True,True,True
+Portugal,PRT,True,True,True,True,True
+Romania,ROU,True,True,True,True,True
+Russia,RUS,True,True,True,True,True
+Serbia,SRB,True,True,True,True,True
+Slovak Republic,SVK,True,True,True,True,True
+Slovenia,SVN,True,True,True,True,True
+Sweden,SWE,True,True,True,True,True
+Türkiye,TUR,True,True,True,True,True
+Ukraine,UKR,True,True,True,True,True

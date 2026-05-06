@@ -7,7 +7,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-ROOT = Path(__file__).resolve().parents[1]
+from config import ROOT, display_country
+
 CLEAN_PATH = ROOT / "data" / "processed" / "rsf_europe_2015_2025.csv"
 CHANGE_PATH = ROOT / "data" / "processed" / "rsf_europe_change_2015_2025.csv"
 FIGURE_DIR = ROOT / "figures"
@@ -26,29 +27,16 @@ FIGURE_CONFIG = {
     "responsive": True,
 }
 
-DISPLAY_NAMES = {
-    "Russian Federation": "Russia",
-    "Turkiye": "Türkiye",
-}
-
 FIGURE_BG = "#fafafa"
 LAND_COLOR = "#ecefec"
 ACCENT_DARK = "#24636b"
 MAP_BG = "#02040a"
 MAP_TEXT = "#f7f8ff"
 MAP_MUTED = "#a7adbd"
-MAP_PURPLE = "#7b68ee"
-MAP_BRIGHT_PURPLE = "#a78bfa"
+GAIN_COLOR = "#70e4b1"
+DECLINE_COLOR = "#ff6b9a"
 MAP_OUTLINE = "#ffffff"
-GAIN = "#24636b"
-DECLINE = "#9fb8bd"
 TEXT_COLOR = "#181817"
-
-
-def display_country(country: str) -> str:
-    """Return a reader-facing country label for charts and hover text."""
-    return DISPLAY_NAMES.get(country, country)
-
 
 def build_map_figure(frame: pd.DataFrame) -> go.Figure:
     """Build a modern animated Europe choropleth with clean, sophisticated styling."""
@@ -77,15 +65,16 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
     fig = px.choropleth(
         map_frame,
         locations="iso3",
+        locationmode="ISO-3",
         color="score",
         hover_name="display_country",
         custom_data=["score_2015", "total_change"],
-        color_continuous_scale=[[0, "#12091f"], [0.5, "#5b3abf"], [1, MAP_BRIGHT_PURPLE]],
+        color_continuous_scale=[[0, DECLINE_COLOR], [0.5, "#171b26"], [1, GAIN_COLOR]],
         range_color=(0, 100),
-        scope="europe",
+        scope="world",
         animation_frame="year",
         animation_group="country",
-        title="Change of Press Freedom<br>Scores in Europe",
+        title="Change of Press Freedom Scores in Europe",
     )
     
     # Create custom hover template with journalistic context
@@ -104,7 +93,7 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
     fig.update_traces(marker_line_color=MAP_OUTLINE, marker_line_width=0.45)
     fig.update_layout(
         title={
-            "text": "Change of Press Freedom<br>Scores in Europe",
+            "text": "Change of Press Freedom Scores in a Europe-Focused Country Subset",
             "font": {"size": 22, "color": MAP_TEXT, "family": "Arial, sans-serif"},
             "x": 0.5,
             "xanchor": "center",
@@ -131,12 +120,14 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
             landcolor=MAP_BG,
             showocean=True,
             oceancolor=MAP_BG,
-            coastlinecolor=MAP_OUTLINE,
-            countrycolor=MAP_OUTLINE,
-            showcountries=True,
+            showcoastlines=False,
+            coastlinecolor=MAP_BG,
+            countrycolor=MAP_BG,
+            showcountries=False,
+            showframe=False,
             projection_type="natural earth",
-            lataxis_range=[34, 72],
-            lonaxis_range=[-18, 48],
+            lataxis_range=[28, 74],
+            lonaxis_range=[-26, 66],
         ),
         # Hide slider
         sliders=[{
@@ -193,7 +184,7 @@ def build_change_figure(frame: pd.DataFrame) -> go.Figure:
     display["change"] = display["change"].round(2)
 
     display = display.assign(display_country=display["country"].map(display_country))
-    colors = [MAP_BRIGHT_PURPLE if value > 0 else "#4c357f" for value in display["change"]]
+    colors = [GAIN_COLOR if value > 0 else DECLINE_COLOR for value in display["change"]]
     x_limit = 32
 
     fig = go.Figure(

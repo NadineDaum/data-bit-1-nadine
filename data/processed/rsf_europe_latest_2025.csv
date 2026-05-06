@@ -1,47 +1,47 @@
-country,score_2025
-Norway,92.31
-Estonia,89.46
-Netherlands,88.64
-Sweden,88.13
-Finland,87.18
-Denmark,86.93
-Ireland,86.92
-Portugal,84.26
-Switzerland,83.98
-Czechia,83.96
-Germany,83.85
-Liechtenstein,83.42
-Luxembourg,83.04
-Lithuania,82.27
-Latvia,81.82
-Iceland,81.36
-Belgium,80.12
-United Kingdom,78.89
-Austria,78.12
-Spain,77.35
-France,76.62
-Poland,74.79
-Slovenia,74.06
-Armenia,73.96
-Moldova,73.36
-Montenegro,72.83
-Slovak Republic,71.93
-North Macedonia,70.44
-Italy,68.01
-Romania,66.42
-Croatia,64.2
-Ukraine,63.93
-Andorra,63.3
-Malta,62.96
-Hungary,62.82
-Bulgaria,60.78
-Cyprus,59.04
-Albania,58.18
-Bosnia and Herzegovina,56.33
-Greece,55.37
-Serbia,53.55
-Georgia,50.53
-Turkiye,29.4
-Belarus,25.73
-Azerbaijan,25.47
-Russian Federation,24.57
+country,iso3,score_2025
+Norway,NOR,92.31
+Estonia,EST,89.46
+Netherlands,NLD,88.64
+Sweden,SWE,88.13
+Finland,FIN,87.18
+Denmark,DNK,86.93
+Ireland,IRL,86.92
+Portugal,PRT,84.26
+Switzerland,CHE,83.98
+Czechia,CZE,83.96
+Germany,DEU,83.85
+Liechtenstein,LIE,83.42
+Luxembourg,LUX,83.04
+Lithuania,LTU,82.27
+Latvia,LVA,81.82
+Iceland,ISL,81.36
+Belgium,BEL,80.12
+United Kingdom,GBR,78.89
+Austria,AUT,78.12
+Spain,ESP,77.35
+France,FRA,76.62
+Poland,POL,74.79
+Slovenia,SVN,74.06
+Armenia,ARM,73.96
+Moldova,MDA,73.36
+Montenegro,MNE,72.83
+Slovak Republic,SVK,71.93
+North Macedonia,MKD,70.44
+Italy,ITA,68.01
+Romania,ROU,66.42
+Croatia,HRV,64.2
+Ukraine,UKR,63.93
+Andorra,AND,63.3
+Malta,MLT,62.96
+Hungary,HUN,62.82
+Bulgaria,BGR,60.78
+Cyprus,CYP,59.04
+Albania,ALB,58.18
+Bosnia and Herzegovina,BIH,56.33
+Greece,GRC,55.37
+Serbia,SRB,53.55
+Georgia,GEO,50.53
+Turkiye,TUR,29.4
+Belarus,BLR,25.73
+Azerbaijan,AZE,25.47
+Russian Federation,RUS,24.57
