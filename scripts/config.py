@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # Canonical analytical universe for this project.
 # "Europe" means this RSF/Data360 processing subset, not EU membership.
+# If a country is added or removed here, rerun cleaning, analysis, list_data_builder, and visualization.
 EUROPE_ISO3 = (
     "ALB", "AND", "ARM", "AUT", "AZE", "BEL", "BGR", "BIH", "BLR", "CHE",
     "CYP", "CZE", "DEU", "DNK", "ESP", "EST", "FIN", "FRA", "GBR", "GEO",
@@ -17,6 +18,7 @@ EUROPE_ISO3 = (
 EUROPE_ISO3_SET = set(EUROPE_ISO3)
 
 # Plotly's built-in ISO-3 choropleth geometry is the map geometry source.
+# This separate name makes the data/map consistency check easier to read.
 MAP_GEOMETRY_ISO3 = EUROPE_ISO3_SET
 
 DISPLAY_NAMES = {

@@ -28,6 +28,7 @@ def clean_press_freedom_data(raw_path: Path) -> pd.DataFrame:
     if missing_columns:
         raise ValueError(f"Missing expected raw columns: {', '.join(missing_columns)}")
 
+    # Keep only the overall RSF score; the raw file also contains indicator components.
     cleaned = frame.loc[frame["INDICATOR"] == "RWB_PFI_SCORE", [
         RAW_COLUMNS["country"],
         RAW_COLUMNS["iso3"],
@@ -52,6 +53,7 @@ def clean_press_freedom_data(raw_path: Path) -> pd.DataFrame:
     cleaned["score"] = pd.to_numeric(cleaned["score"], errors="coerce")
     cleaned["iso3"] = cleaned["iso3"].astype(str).str.upper()
 
+    # This is where the story's "Europe-focused subset" is applied.
     cleaned = cleaned.loc[cleaned["iso3"].isin(EUROPE_ISO3_SET)].copy()
     cleaned = cleaned.loc[cleaned["year"].between(2015, 2025, inclusive="both")].copy()
     cleaned = cleaned.dropna(subset=["country", "year", "score", "iso3"])
@@ -77,6 +79,7 @@ def build_consistency_check(raw_frame: pd.DataFrame, processed: pd.DataFrame) ->
             country = raw_country.iloc[0]
 
         years = set(processed.loc[processed["iso3"] == iso3, "year"].astype(int))
+        # The article compares endpoints, so a country needs both years to make the final outputs.
         has_complete_years = {2015, 2025}.issubset(years)
         in_map_geometry = iso3 in MAP_GEOMETRY_ISO3
 

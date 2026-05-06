@@ -11,6 +11,7 @@ STABILITY_PATH = ROOT / "data" / "processed" / "rsf_europe_stability_2015_2025.c
 
 
 def build_change_table(frame: pd.DataFrame) -> pd.DataFrame:
+    # Endpoint comparison used by the article text, hero ranking, table, and change chart.
     latest = frame.loc[frame["year"] == 2025, ["country", "iso3", "score"]].rename(columns={"score": "score_2025"})
     first = frame.loc[frame["year"] == 2015, ["country", "iso3", "score"]].rename(columns={"score": "score_2015"})
 
@@ -22,6 +23,7 @@ def build_change_table(frame: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_stability_table(frame: pd.DataFrame) -> pd.DataFrame:
+    # Side output for checking which countries swing most across the full decade.
     grouped = frame.groupby(["country", "iso3"])["score"].agg(min_score="min", max_score="max").reset_index()
     grouped["score_range"] = grouped["max_score"] - grouped["min_score"]
     return grouped.sort_values("score_range", ascending=False)

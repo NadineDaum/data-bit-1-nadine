@@ -1,5 +1,6 @@
 /**
- * Scrollytelling Navigation & Interactions
+ * Article navigation and the Map/List table interactions.
+ * This file does not own the data; it reads countriesDataInline from countries-data.js.
  */
 
 // Track which section is currently in view
@@ -78,7 +79,8 @@ window.addEventListener('scroll', function () {
 });
 
 /**
- * Setup year slider sync
+ * Leftover helper for a possible custom year slider.
+ * The current map uses Plotly's generated controls, so this is intentionally not called.
  */
 function setupYearSlider() {
     const yearSlider = document.querySelector('[data-year-slider]');
@@ -95,10 +97,11 @@ function setupYearSlider() {
 }
 
 /**
- * Setup view toggle (Map vs List)
+ * Setup view toggle (Map vs List).
+ * The iframe map is generated offline; the list is built in-browser from the same country-change data.
  */
 let countriesData = [];
-let currentSortOrder = 'asc'; // Default sort order
+let currentSortOrder = 'asc'; // Ascending means the biggest negative changes appear first.
 
 function setupViewToggle() {
     const toggleButtons = document.querySelectorAll('.toggle-tab');
@@ -106,7 +109,7 @@ function setupViewToggle() {
     const listView = document.getElementById('list-view');
     const sortButtons = document.querySelectorAll('.sort-btn');
 
-    // Load countries data
+    // Load countries data before the first table render.
     loadCountriesData().then(() => {
         populateTable(currentSortOrder);
     });
@@ -148,7 +151,8 @@ function setupViewToggle() {
 }
 
 /**
- * Load countries data from inline variable
+ * Load countries data from the generated inline variable.
+ * If this logs an error, check that countries-data.js is loaded before main.js in press-freedom-map.html.
  */
 function loadCountriesData() {
     return new Promise((resolve) => {
@@ -170,7 +174,7 @@ function populateTable(sortOrder) {
     const tableBody = document.getElementById('table-body');
     if (!tableBody || !countriesData || countriesData.length === 0) return;
 
-    // Sort the data
+    // Sort a copy so button clicks do not mutate the original generated data.
     let sortedData = [...countriesData];
 
     if (sortOrder === 'asc') {

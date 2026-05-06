@@ -1,4 +1,5 @@
 (function () {
+    // Small hero preview of the data: enough rows to show the pattern, not the whole spreadsheet.
     const MAX_VISIBLE_ROWS = 7;
     const AUTOPLAY_MS = 4600;
 
@@ -28,6 +29,7 @@
             }
 
             const countries = getRankedCountries(mode);
+            // Scale the tiny underline bars against the largest visible movement.
             const largestMagnitude = Math.max(...countries.map(country => Math.abs(country.change)));
 
             stack.replaceChildren(...countries.map((country, index) => {
@@ -68,6 +70,7 @@
     }
 
     function getRankedCountries(mode) {
+        // Gains and declines are just two sort directions over the same generated data.
         return [...countriesDataInline]
             .sort((a, b) => mode === 'gains' ? b.change - a.change : a.change - b.change)
             .slice(0, MAX_VISIBLE_ROWS);

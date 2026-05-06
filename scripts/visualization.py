@@ -62,6 +62,7 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
     map_frame["score"] = map_frame["score"].round(2)
     map_frame["score_2015"] = map_frame["score_2015"].round(1)
 
+    # Animated choropleth: each frame is a year, each country keeps the same ISO-3 identity.
     fig = px.choropleth(
         map_frame,
         locations="iso3",
@@ -126,6 +127,7 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
             showcountries=False,
             showframe=False,
             projection_type="natural earth",
+            # Slightly wider than "core Europe" so Türkiye, Russia, Armenia and Georgia are visibly in-frame.
             lataxis_range=[28, 74],
             lonaxis_range=[-26, 66],
         ),
@@ -178,6 +180,7 @@ def build_map_figure(frame: pd.DataFrame) -> go.Figure:
 
 
 def build_change_figure(frame: pd.DataFrame) -> go.Figure:
+    # Keep this chart intentionally selective: the full country table is available in the article.
     top_gains = frame.nlargest(5, "change").sort_values("change", ascending=True)
     top_declines = frame.nsmallest(5, "change").sort_values("change", ascending=True)
     display = pd.concat([top_declines, top_gains], ignore_index=True)
@@ -249,6 +252,7 @@ def main() -> None:
     map_figure = build_map_figure(frame)
     change_figure = build_change_figure(change)
 
+    # The article embeds these HTML files directly as iframes.
     map_figure.write_html(MAP_PATH, include_plotlyjs="cdn", config=MAP_CONFIG)
     change_figure.write_html(CHANGE_FIG_PATH, include_plotlyjs="cdn", config=FIGURE_CONFIG)
 
