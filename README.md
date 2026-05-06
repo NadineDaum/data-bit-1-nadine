@@ -2,7 +2,7 @@
 
 **Data Bit No. 1 — Data Journalism, Spring 2026**  
 **Author:** Nadine Daum  
-[View article](https://raw.githack.com/NadineDaum/data-bit-1-nadine/main/press-freedom-map.html)
+[View article](https://rawcdn.githack.com/NadineDaum/data-bit-1-nadine/55a13b8ab7cabd869d54190d6d7c45ea9282d01b/press-freedom-map.html)
 
 An interactive data journalism piece on changes in press freedom scores across a Europe-focused RSF/Data360 country subset, 2015–2025.
 
